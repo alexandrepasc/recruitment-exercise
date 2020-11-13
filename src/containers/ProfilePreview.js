@@ -8,7 +8,7 @@ export default function ProfilePreview(props) {
     return (
         <Row className='justify-content-md-center'>
             <Col className='col-md-12'>
-                <NavLink to='/' activeClassName='RegisterUserForm'>
+                <NavLink to='/' onClick={props.handleBack}>
                     Back
                 </NavLink><br/>
                 <Row><Col>&nbsp;</Col></Row>

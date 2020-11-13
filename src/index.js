@@ -36,6 +36,23 @@ class Main extends React.Component {
         });
     }
 
+    handleBack(props) {
+        console.log('back');
+
+        this.setState({
+            profile: {
+                firstName: '',
+                lastName: '',
+                birthDate: '',
+                username: '',
+                password: '',
+                confirmPassword: '',
+                acceptTerms: false,
+            },
+            render: ''
+        });
+    }
+
     render() {
 
         return (
@@ -44,7 +61,7 @@ class Main extends React.Component {
                 <Container>
                     <Switch>
                         <Route path='/preview'>
-                            <ProfilePreview profile={this.state.profile} />
+                            <ProfilePreview profile={this.state.profile} handleBack={() => this.handleBack()} />
                         </Route>
 
                         <Route path="/">

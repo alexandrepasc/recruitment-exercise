@@ -140,7 +140,7 @@ export default class RegisterUserForm extends React.Component {
                                 id='password'
                                 name='passwordId'
                                 placeholder='Password'
-                                handleChange={(e) => this.handleChange(e)}
+                                handleChange={(e) => this.handlePasswordChange(e)}
                                 value={this.state.profile.password}
                             />
                         </Col>

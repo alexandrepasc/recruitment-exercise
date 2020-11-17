@@ -34,7 +34,7 @@ export function passwordChangeImpl(props) {
         }
     }
 
-    if (profileDict.password !== profileDict.confirmPassword) {
+    if ((profileDict.password !== profileDict.confirmPassword) && (profileDict.confirmPassword !== '')) {
 
         errorDict.password = 'The password does not match';
     } else {
